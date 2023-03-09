@@ -31,14 +31,14 @@ public class OnTrigger : MonoBehaviour
     }
 
     private bool CanTrigger(GameObject otherGameObject)
-    {
-        if(requiredTag != string.Empty)
+   {
+        if(requiredTag != string.Empty && ToggleParticle._IsFlameOn == true)
         {
             return otherGameObject.CompareTag(requiredTag);
         }
         else
         {
-            return true;
+            return false;
         }
     }
 

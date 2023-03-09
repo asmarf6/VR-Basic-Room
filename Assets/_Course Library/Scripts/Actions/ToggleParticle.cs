@@ -8,6 +8,7 @@ public class ToggleParticle : MonoBehaviour
 {
     private ParticleSystem currentParticleSystem = null;
     private MonoBehaviour currentOwner = null;
+    public static  bool _IsFlameOn = false;
 
     private void Awake()
     {
@@ -17,11 +18,13 @@ public class ToggleParticle : MonoBehaviour
     public void Play()
     {
         currentParticleSystem.Play();
+        _IsFlameOn = true;
     }
 
     public void Stop()
     {
         currentParticleSystem.Stop();
+        _IsFlameOn = false;
     }
 
     public void PlayWithExclusivity(MonoBehaviour owner)
