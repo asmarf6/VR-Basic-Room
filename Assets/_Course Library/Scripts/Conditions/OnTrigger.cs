@@ -20,8 +20,9 @@ public class OnTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (CanTrigger(other.gameObject))
-            OnEnter?.Invoke(other);
+        if (CanTrigger(other.gameObject))      
+            OnEnter?.Invoke(other);           
+            
     }
 
     private void OnTriggerExit(Collider other)
